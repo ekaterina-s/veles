@@ -1,0 +1,98 @@
+.header {
+    background-color: $header-bg;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    //если подгонять под макет
+    // padding-top: 13px; 
+    // padding-bottom: 13px;
+    box-shadow: 0px 4px 4px rgba($header-bg, 0.4);
+
+    @include tablet {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.header__wrap {
+    max-width: 1236px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    flex-shrink: 0;
+    display: block;
+    // width: 46px;
+    // height: 46px;
+    // background-color: #fff;
+    // border-radius: 50%; 
+
+    @include mobile {
+        margin-right: 215px;
+    }
+}
+
+.header__icon-tel {
+    display: block;
+    content: "";
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    background: url("../../img/phone.svg") no-repeat 0 0;
+    margin-right: 13px;
+}
+
+.header__tel {
+    // display: flex;
+    // align-items: center;
+    // padding: 8px 18px;
+    color: $site-list-color;
+    @include font(18px, 24px);
+    text-decoration: none;
+    margin-right: 200px;
+
+    @include mobile {
+        display: none;
+    }
+}
+
+// .header__tel::before {
+//     content: "";
+//     flex-shrink: 0;
+//     width: 18px;
+//     height: 18px;
+//     background: url("../../img/phone.svg") no-repeat 0 0;
+//     margin-right: 10px;
+
+//     @include mobile {
+//         display: block;
+//     }
+// }
+
+.header__toggle {
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 7px;
+    width: 32px;
+    height: 32px;
+    background-color: $header-bg;
+    cursor: pointer;
+    border: none;
+
+    @include tablet {
+        display: flex;
+    }
+}
+
+.header__toggle::before {
+    content: '';
+    width: 22px;
+    height: 2px;
+    background-color: $drop-triangle;
+    box-shadow: 0 8px 0 0 $drop-triangle, 0 16px 0 0 $drop-triangle;
+}
