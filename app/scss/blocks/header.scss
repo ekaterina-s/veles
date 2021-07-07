@@ -1,98 +1,63 @@
 .header {
-    background-color: $header-bg;
-    padding-top: 17px;
-    padding-bottom: 17px;
-    //если подгонять под макет
-    // padding-top: 13px; 
-    // padding-bottom: 13px;
-    box-shadow: 0px 4px 4px rgba($header-bg, 0.4);
-
-    @include tablet {
-        position: relative;
-        z-index: 1;
-    }
+    background-color: #161616;
 }
 
-.header__wrap {
-    max-width: 1236px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: 0 auto;
+.header__top-panel {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    padding: 29px 0 113px 0;
 }
 
 .header__logo {
-    flex-shrink: 0;
-    display: block;
-    // width: 46px;
-    // height: 46px;
-    // background-color: #fff;
-    // border-radius: 50%; 
-
-    @include mobile {
-        margin-right: 215px;
-    }
-}
-
-.header__icon-tel {
-    display: block;
-    content: "";
-    flex-shrink: 0;
-    width: 18px;
-    height: 18px;
-    background: url("../../img/phone.svg") no-repeat 0 0;
-    margin-right: 13px;
-}
-
-.header__tel {
-    // display: flex;
-    // align-items: center;
-    // padding: 8px 18px;
-    color: $site-list-color;
-    @include font(18px, 24px);
+    // display: block;
+    margin-right: 79px;
     text-decoration: none;
-    margin-right: 200px;
-
-    @include mobile {
-        display: none;
-    }
+    color: #fff;
+    text-transform: uppercase;
+    font: normal 12px/14px, 'Raleway', sans-serif;
+    letter-spacing: 0.22em;
+    padding: 12px 19px 9px 19px;
+    border: 1px solid #fff;
 }
 
-// .header__tel::before {
-//     content: "";
-//     flex-shrink: 0;
-//     width: 18px;
-//     height: 18px;
-//     background: url("../../img/phone.svg") no-repeat 0 0;
-//     margin-right: 10px;
+.header__navigation {
+    display: flex;
+    // justify-content: space-between;
+    padding: 0;
+    padding-top: 11px;
+    margin: 0;
+    margin-right: 28px;
+    list-style-type: none;
+    text-transform: uppercase;
+    font: normal 13px/15px, 'Raleway', sans-serif;
+    letter-spacing: 0.1em;
+}
 
-//     @include mobile {
-//         display: block;
-//     }
-// }
+.header__navigation--item:not(:last-child) {
+    margin-right: 30px;
+}
 
-.header__toggle {
-    display: none;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 7px;
-    width: 32px;
-    height: 32px;
-    background-color: $header-bg;
-    cursor: pointer;
+.header__bottom-panel {
+    display: flex;
+    padding: 0 0 0 473px;
+}
+
+.header__bottom-panel--description {
+    padding: 72px 0 54px 0;
+    margin: 0;
+    font: 700 29px/49px 'Raleway', sans-serif;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.header__bottom-panel--button {
     border: none;
-
-    @include tablet {
-        display: flex;
-    }
-}
-
-.header__toggle::before {
-    content: '';
-    width: 22px;
-    height: 2px;
-    background-color: $drop-triangle;
-    box-shadow: 0 8px 0 0 $drop-triangle, 0 16px 0 0 $drop-triangle;
+    padding: 19px 56px 19px 50px;
+    background-color: #FFE500;
+    font: 700 18px/21px, 'Raleway', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
 }

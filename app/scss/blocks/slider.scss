@@ -1,0 +1,27 @@
+.slider {
+    display: flex;
+    align-items: flex-end;
+}
+
+.slider__buttons-wrap {
+    margin-right: 35px;
+    margin-bottom: 39px;
+}
+
+.slider__buttons-button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    // width: 24px;
+    // height: 8px;
+}
+
+.slider__buttons-current, .slider__buttons-slash, .slider__buttons-total {
+    color: #fff;
+    font: normal 18px/21px, 'Raleway', sans-serif;
+}
+
+.slide-wrap {
+    display: flex;
+}

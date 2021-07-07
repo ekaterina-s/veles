@@ -5,28 +5,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- <svg class="svg-sprite" style="display: none;">
+        <symbol id="arrow" viewBox="0 0 25 9">
+            <path d="M25 5H1M1 5L3.5 1M1 5L4 8.5" fill="currentColor" />
+        </symbol>
+    </svg> -->
+
+    <!-- <svg width="25" height="9" viewBox="0 0 25 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M25 5H1M1 5L3.5 1M1 5L4 8.5" stroke="white"/>
+        </svg> -->
+
 </head>
+
 <body class="page-body">
     <header class="header">
         <div class="container">
-            <a href="#">logo</a>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li>земля</li>
-                    <li>крановые площадки</li>
-                    <li>выгрузка вагонов</li>
-                    <li>фасовка</li>
-                    <li>щебень</li>
+            <div class="header__top-panel">
+                <a class="header__logo" href="#">veles</a>
+                <!-- <nav class="nav"> -->
+                <ul class="header__navigation">
+                    <li class="header__navigation--item">земля</li>
+                    <li class="header__navigation--item">крановые площадки</li>
+                    <li class="header__navigation--item">выгрузка вагонов</li>
+                    <li class="header__navigation--item">фасовка</li>
+                    <li class="header__navigation--item">щебень</li>
                 </ul>
+                <!-- </nav> -->
                 <div class="contacts">
-                    <a href="tel:+7(927)6784514" class="contacts__phone">+7 (927) 678-45-14</a>
-                    <span class="contacts__address">г. Казань, Складская 20</span>
+                    <a class="contacts__phone" href="tel:+7(927)6784514">
+                        +7 (927) 678-45-14</a>
+                    <span class="contacts__address"> г. Казань,
+                        Складская 20</span>
                 </div>
-            </nav>
+            </div>
         </div>
-        <p class="description"></p>
-        <button>заказать</button>
-        <div class="slider"></div>
+        <div class="header__bottom-panel">
+            <div class="header__bottom-panel--wrapper">
+                <p class="header__bottom-panel--description">выгрузка вагонов, аренда земли, крановых площадок,
+                    ответственное хранение</p>
+                <button class="header__bottom-panel--button" type="button">заказать</button>
+            </div>
+            <div class="slider">
+                <div class="slider__buttons-wrap">
+                    <button type="button" class="slider__buttons-button button-previous"
+                        aria-label="переключить на предыдущий слайд">
+                        <svg class="icon-previous" width="25" height="9" viewBox="0 0 25 9" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25 5H1M1 5L3.5 1M1 5L4 8.5" stroke="white" />
+                        </svg>
+                    </button>
+                    <span class="slider__buttons-current">1</span>
+                    <span class="slider__buttons-slash">/</span>
+                    <span class="slider__buttons-total">3</span>
+                    <button type="button" class="slider__buttons-button button-next"
+                        aria-label="переключить на следующий слайд">
+                        <svg class="icon-next" width="25" height="9" viewBox="0 0 25 9" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25 5H1M1 5L3.5 1M1 5L4 8.5" stroke="white" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="slider__slide-wrap slide-wrap">
+                    <div class="slide-wrap__slide slide">
+                        <img class="slide__img" src="../img/slide__img.jpg" alt="вагоны на фоне гор" width="
+                    972" height="506">
+                    </div>
+                    <div class="slide-wrap__slide slide">
+                        <img class="slide__img" src="#" alt="#" width="
+                    972" height="506">
+                    </div>
+                    <div class="slide-wrap__slide slide">
+                        <img class="slide__img" src="#" alt="#" width="
+                    972" height="506">
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
     <footer></footer>
     <script src="js/main.js"></script>
