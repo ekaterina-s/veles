@@ -1,0 +1,15 @@
+@mixin font($font-weight, $font-size, $line-height, $font-weight: null){
+    font: $font-weight #{$font-size}/#{$line-height} $main-font;
+}
+
+@mixin tablet-down{
+    @media (max-width: $tablet-width){
+        @content;
+    }
+}
+
+@mixin tablet-up {
+    @media (min-width: $desktop-width){
+        @content;
+    }
+}

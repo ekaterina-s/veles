@@ -1,63 +1,90 @@
 .header {
-    background-color: #161616;
+    background-color: $black-color;
+    position: relative;
+    z-index: 1;
+
+    @include tablet-down {
+        background: url(../../img/slide__img.jpg) no-repeat 0 0;
+    }
 }
 
-.header__top-panel {
-    display: flex;
-    justify-content: space-between;
-    color: #fff;
-    font-family: 'Raleway', sans-serif;
-    padding: 29px 0 113px 0;
+.header::after {
+    @include tablet-down {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: $black-color;
+        opacity: 0.6;
+        z-index: -1;
+    }
 }
 
-.header__logo {
-    // display: block;
-    margin-right: 79px;
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-    font: normal 12px/14px, 'Raleway', sans-serif;
-    letter-spacing: 0.22em;
-    padding: 12px 19px 9px 19px;
-    border: 1px solid #fff;
+.header__top {
+    padding: 29px 0;
 }
 
-.header__navigation {
-    display: flex;
-    // justify-content: space-between;
-    padding: 0;
-    padding-top: 11px;
-    margin: 0;
-    margin-right: 28px;
-    list-style-type: none;
-    text-transform: uppercase;
-    font: normal 13px/15px, 'Raleway', sans-serif;
-    letter-spacing: 0.1em;
+.header__bottom{
+    padding: 137px 0 39px 0;
+
+    @include tablet-down {
+        padding: 100px 0 22px 0;
+    }
 }
 
-.header__navigation--item:not(:last-child) {
-    margin-right: 30px;
-}
-
-.header__bottom-panel {
-    display: flex;
-    padding: 0 0 0 473px;
-}
-
-.header__bottom-panel--description {
-    padding: 72px 0 54px 0;
-    margin: 0;
-    font: 700 29px/49px 'Raleway', sans-serif;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #fff;
-}
-
-.header__bottom-panel--button {
-    border: none;
-    padding: 19px 56px 19px 50px;
-    background-color: #FFE500;
-    font: 700 18px/21px, 'Raleway', sans-serif;
-    text-transform: uppercase;
+.header__toggle {
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    width: 32px;
+    height: 32px;
+    background-color: $black-color;
     cursor: pointer;
+    border: none;
+
+    @include tablet-down {
+        display: flex;
+        background-color: transparent;
+    }
 }
+
+.header__toggle--closed::before {
+    content: '';
+    width: 24px;
+    height: 2px;
+    background-color: $white-color;
+    box-shadow: 0 8px 0 0 $white-color, 0 16px 0 0 $white-color;
+}
+
+.header__toggle--opened {
+    top: 0;
+    right: auto;
+    left: 0;
+  
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 35px;
+      right: 17px;
+      width: 25px;
+      height: 2px;
+      background-color: $white-color;
+    }
+  
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+  
+    &::after {
+      transform: rotate(-45deg);
+    }
+  
+    &:active::before,
+    &:active::after {
+      background-color: fade($white-color, 30%);
+    }
+  }

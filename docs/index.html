@@ -10,11 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 
-    <!-- <svg class="svg-sprite" style="display: none;">
+    <svg style="display: none;">
         <symbol id="arrow" viewBox="0 0 25 9">
-            <path d="M25 5H1M1 5L3.5 1M1 5L4 8.5" fill="currentColor" />
+            <path d="M25 5H1M1 5L3.5 1M1 5L4 8.5" fill="none" stroke="currentColor" />
         </symbol>
-    </svg> -->
+    </svg>
+
 
     <!-- <svg width="25" height="9" viewBox="0 0 25 9" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M25 5H1M1 5L3.5 1M1 5L4 8.5" stroke="white"/>
@@ -25,67 +26,79 @@
 <body class="page-body">
     <header class="header">
         <div class="container">
-            <div class="header__top-panel">
-                <a class="header__logo" href="#">veles</a>
-                <!-- <nav class="nav"> -->
-                <ul class="header__navigation">
-                    <li class="header__navigation--item">земля</li>
-                    <li class="header__navigation--item">крановые площадки</li>
-                    <li class="header__navigation--item">выгрузка вагонов</li>
-                    <li class="header__navigation--item">фасовка</li>
-                    <li class="header__navigation--item">щебень</li>
-                </ul>
-                <!-- </nav> -->
+            <div class="header__top nav-box">
+                <a class="logo" href="#">
+                    <img class="logo__pic" src="../img/logo.svg" alt="logo">
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link nav__link--active">земля</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">крановые площадки</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">выгрузка вагонов</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">фасовка</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">щебень</a>
+                        </li>
+                    </ul>
+                </nav>
                 <div class="contacts">
-                    <a class="contacts__phone" href="tel:+7(927)6784514">
-                        +7 (927) 678-45-14</a>
-                    <span class="contacts__address"> г. Казань,
-                        Складская 20</span>
+                    <a class="contacts__item contacts__item--phone" href="tel:+7(927)6784514">
+                        +7 (927) 678-45-14
+                    </a>
+
+                    <span class="contacts__item contacts__item--address">
+                        г. Казань, Складская 20
+                    </span>
                 </div>
+                <button class="header__toggle header__toggle--closed" aria-label="переключатель меню" type="button"><span class="visually-hidden">открыть
+                    меню</span></button>
+            </div>
+
+            <div class="header__bottom">
+
+                <div class="slider">
+                    <div class="slider__container">
+                        <div class="slider__slide">
+                            <div class="slider__description">
+                                <div class="slider__title">выгрузка вагонов, аренда земли, крановых площадок,
+                                    ответственное хранение</div>
+                                <button class="slider__order button button--primary" aria-label="заказать"
+                                    type="button">Заказать</button>
+                            </div>
+                            <img class="slider__img" src="../img/slide__img.jpg" alt="вагоны на фоне гор">
+                        </div>
+                    </div>
+                    <div class="slider__pagination">
+                        <button class="slider__button slider__button-left" aria-label="переключить на предыдущий слайд">
+                            <svg class="slider__button-icon">
+                                <use xlink:href="#arrow" />
+                            </svg>
+                        </button>
+                        <div class="slider__counter">1 / 3</div>
+                        <button class="slider__button slider__button-right" aria-label="переключить на следующий слайд">
+                            <svg class="slider__button-icon slider__button-icon--reverse">
+                                <use xlink:href="#arrow" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+
+
             </div>
         </div>
-        <div class="header__bottom-panel">
-            <div class="header__bottom-panel--wrapper">
-                <p class="header__bottom-panel--description">выгрузка вагонов, аренда земли, крановых площадок,
-                    ответственное хранение</p>
-                <button class="header__bottom-panel--button" type="button">заказать</button>
-            </div>
-            <div class="slider">
-                <div class="slider__buttons-wrap">
-                    <button type="button" class="slider__buttons-button button-previous"
-                        aria-label="переключить на предыдущий слайд">
-                        <svg class="icon-previous" width="25" height="9" viewBox="0 0 25 9" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M25 5H1M1 5L3.5 1M1 5L4 8.5" stroke="white" />
-                        </svg>
-                    </button>
-                    <span class="slider__buttons-current">1</span>
-                    <span class="slider__buttons-slash">/</span>
-                    <span class="slider__buttons-total">3</span>
-                    <button type="button" class="slider__buttons-button button-next"
-                        aria-label="переключить на следующий слайд">
-                        <svg class="icon-next" width="25" height="9" viewBox="0 0 25 9" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M25 5H1M1 5L3.5 1M1 5L4 8.5" stroke="white" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="slider__slide-wrap slide-wrap">
-                    <div class="slide-wrap__slide slide">
-                        <img class="slide__img" src="../img/slide__img.jpg" alt="вагоны на фоне гор" width="
-                    972" height="506">
-                    </div>
-                    <div class="slide-wrap__slide slide">
-                        <img class="slide__img" src="#" alt="#" width="
-                    972" height="506">
-                    </div>
-                    <div class="slide-wrap__slide slide">
-                        <img class="slide__img" src="#" alt="#" width="
-                    972" height="506">
-                    </div>
-                </div>
-            </div>
+
         </div>
+
+
     </header>
     <footer></footer>
     <script src="js/main.js"></script>

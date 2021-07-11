@@ -1,0 +1,35 @@
+.nav-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// .nav{
+//     @include tablet-down {
+//         display: none;
+//     }
+// }
+
+.nav__list{
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+
+    @include tablet-down {
+        display: none;
+    }
+}
+
+.nav__link{
+    color: $white-color;
+    display: block;
+    font: 13px/24px $main-font;
+    padding: 0 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.13px;
+
+    @include tablet-down {
+        font: 14px/16px $main-font;
+    }
+}
