@@ -27,11 +27,13 @@
         justify-content: center;
         align-items: center;
         height: 100%;
+        margin-top: 80px;
     }
 }
 
 .nav._active{
     transform: translateY(0);
+    z-index: 1;
   }
 
 .nav__link{
