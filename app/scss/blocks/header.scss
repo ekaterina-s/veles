@@ -2,10 +2,6 @@
     background-color: $black-color;
     position: relative;
     z-index: 1;
-
-    @include tablet-down {
-        background: url(../../img/slide__img.jpg) no-repeat 0 0;
-    }
 }
 
 .header::after {
@@ -43,6 +39,7 @@
     background-color: $black-color;
     cursor: pointer;
     border: none;
+    z-index: 4;
 
     @include tablet-down {
         display: flex;
