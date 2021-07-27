@@ -1,0 +1,66 @@
+.advantages {
+    padding: 0 110px;
+}
+
+.advantages__header {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 84px;
+    font: 30px/35px $main-font;
+    text-align: center;
+
+    @include tablet-down {
+        padding-bottom: 30px;
+    }
+}
+
+.advantages__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font: 16px/19px $main-font;
+    counter-reset: list-counter;
+
+    @include tablet-down {
+        display: block;
+    }
+}
+
+.advantages__item {
+    position: relative;
+    padding-bottom: 98px;
+    max-width: 182px;
+}
+
+.advantages__item::after {
+    counter-increment: list-counter;
+    content: counter(list-counter);
+    font: 80px/94px $main-font;
+    color: rgba($second-black, 0.03);
+    position: absolute;
+    top: -71px;
+    right: 136px;
+    z-index: -1;
+
+    @include tablet-down {
+        display: none;
+    }
+}
+
+.advantages__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: block;
+}  
+
+.advantages__item--1::before {
+    background-image: url("../img/nutrients.svg");
+  }

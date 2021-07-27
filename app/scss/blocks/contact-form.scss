@@ -1,0 +1,38 @@
+.contact-form {
+    padding: 0 335px 105px 307px;
+}
+
+.contact-form__header {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 31px;
+    font: 700 25px/29px $main-font;
+    color: $black-color;
+    letter-spacing: 0.13px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.form__textfield {
+    width: 249px;
+    height: 55px;
+    background-color: $second-grey-background;
+    border: none;
+    box-sizing: border-box;
+    padding: 18px 0 18px 20px;
+    margin-right: 15px;
+    font: 16px/19px $main-font;
+    color: rgba($black-color, 0.5);
+}
+
+.form__submit {
+    width: 170px;
+    height: 50px;
+    background-color: $black-color;
+    font: 12px/14px $main-font;
+    letter-spacing: 0.07em;
+    color: $white-color;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    border: none;
+}

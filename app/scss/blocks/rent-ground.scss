@@ -1,0 +1,46 @@
+.rent-ground {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin-bottom: 100px;
+
+    @include tablet-down {
+        display: block;
+    }
+}
+
+.rent-ground__header {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 25px;
+    font: 700 30px/35px $main-font;
+    text-transform: uppercase;
+    letter-spacing: 0.13px;
+    color: $second-black;
+
+    @include tablet-down {
+        font: 700 18px/21px $main-font;
+        text-align: center;
+    }
+}
+
+.rent-ground__text {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 40px;
+    font: 15px/18px $main-font;
+    color: $black-color;
+    max-width: 430px;
+}
+
+.rent-ground__link {
+    text-decoration: none;
+    display: block;
+    font: 700 12px/14px $main-font;
+    color: $white-color;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: $black-color;
+    padding: 19px 30px;
+    max-width: 277px;
+}
