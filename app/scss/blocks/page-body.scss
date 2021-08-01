@@ -1,7 +1,6 @@
 .page-body {
     font-family: $main-font;
-}
-
-._menu--active {
-    overflow: hidden;
+    &._lock {
+        overflow: hidden;
+    }
 }

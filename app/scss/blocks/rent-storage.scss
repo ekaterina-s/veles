@@ -2,12 +2,27 @@
     background-color: $black-color;
     padding: 133px 0 109px 0;
     margin-bottom: 160px;
+
+    @include tablet-down {
+        margin-bottom: 40px;
+    }
 }
 
 .rent-storage .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include tablet-down {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+.rent-storage__column {
+    @include tablet-down {
+        order: 2;
+    }   
 }
 
 .rent-storage__header {
@@ -16,11 +31,20 @@
     padding-bottom: 30px;
     font: 700 30px/35px $main-font;
     text-transform: uppercase;
-    letter-spacing: 0.13px;
+    letter-spacing: 0.13em;
     color: $white-color;
 
     @include tablet-down {
         font: 700 18px/21px $main-font;
+        text-align: center;
+    }
+}
+
+.rent-storage__column {
+    padding-left: 19px;
+
+    @include tablet-down {
+        padding: 0;
     }
 }
 
@@ -31,6 +55,10 @@
     font: 15px/18px $main-font;
     color: $white-color;
     max-width: 493px;
+
+    @include tablet-down {
+        text-align: center;
+    }
 }
 
 .rent-storage__link {
@@ -44,13 +72,25 @@
     padding: 19px 30px;
     max-width: 277px;
     border: 1px solid $white-color;
+
+    @include tablet-down {
+        margin: 0 auto;
+    }
 }
 
-.xxx {
+.rent-storage__picture {
     position: absolute;
     width: 50%;
-    right: 0;
-    top: 4278px;
     height: 570px;
+    right: 0;
+    top: 4836px;
     object-fit: cover;
+
+    @include tablet-down {
+        order: 2;
+        width: 50%;
+        height: 250px;
+        top: 5920px;
+        right: 129px;
+    }
 }

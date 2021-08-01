@@ -1,11 +1,21 @@
 .rent-ground {
     display: flex;
-    justify-content: space-around;
-    align-content: center;
+    justify-content: space-between;
+    align-items: stretch;
     margin-bottom: 100px;
+    padding-left: 19px;
 
     @include tablet-down {
-        display: block;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 60px;
+        padding: 0 8px;
+    }
+}
+
+.container__small {
+    @include tablet-down {
+        order: 2;
     }
 }
 
@@ -15,11 +25,12 @@
     padding-bottom: 25px;
     font: 700 30px/35px $main-font;
     text-transform: uppercase;
-    letter-spacing: 0.13px;
+    letter-spacing: 0.13em;
     color: $second-black;
 
     @include tablet-down {
         font: 700 18px/21px $main-font;
+        padding-bottom: 20px;
         text-align: center;
     }
 }
@@ -27,10 +38,14 @@
 .rent-ground__text {
     margin: 0;
     padding: 0;
-    padding-bottom: 40px;
+    padding-bottom: 48px;
     font: 15px/18px $main-font;
     color: $black-color;
     max-width: 430px;
+
+    @include tablet-down {
+        text-align: center;
+    }
 }
 
 .rent-ground__link {
@@ -43,4 +58,25 @@
     background-color: $black-color;
     padding: 19px 30px;
     max-width: 277px;
+
+    @include tablet-down {
+        padding: 19px 35px;
+        text-align: center;
+        min-width: 288px;
+        margin: 0 auto;
+    }
+}
+
+.rent-ground__picture {
+    display: block;
+    width: 100%;
+    height: 488px;
+    box-shadow: -60px -66px 0 0 #F1F2F5;
+
+    @include tablet-down {
+        order: 1;
+        height: 250px;
+        box-shadow: none;
+        margin-bottom: 18px;
+    }
 }

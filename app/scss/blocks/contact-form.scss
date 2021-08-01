@@ -1,5 +1,15 @@
 .contact-form {
     padding: 0 335px 105px 307px;
+
+    @include tablet-down {
+        padding: 0 12px 60px 12px;
+    }
+}
+
+.contact-form__form {
+    @include tablet-down {
+        text-align: center;
+    }
 }
 
 .contact-form__header {
@@ -8,9 +18,14 @@
     padding-bottom: 31px;
     font: 700 25px/29px $main-font;
     color: $black-color;
-    letter-spacing: 0.13px;
+    letter-spacing: 0.13em;
     text-transform: uppercase;
     text-align: center;
+
+    @include tablet-down {
+        font: 700 18px/21px $main-font;
+        padding-bottom: 20px;
+    }
 }
 
 .form__textfield {
@@ -23,6 +38,13 @@
     margin-right: 15px;
     font: 16px/19px $main-font;
     color: rgba($black-color, 0.5);
+
+    @include tablet-down {
+        width: 288px;
+        height: 50px;
+        margin: 0;
+        margin-bottom: 20px;
+    }
 }
 
 .form__submit {
@@ -35,4 +57,9 @@
     text-transform: uppercase;
     box-sizing: border-box;
     border: none;
+
+    @include tablet-down {
+        width: 288px;
+        height: 50px;
+    }
 }

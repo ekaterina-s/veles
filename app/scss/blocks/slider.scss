@@ -32,7 +32,6 @@
     object-fit: cover;
 
     @include tablet-down {
-        position: fixed;
         top: 0;
         left: 0;
         right: 0;

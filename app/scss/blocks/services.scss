@@ -1,10 +1,12 @@
 .services {
-    padding-top: 130px;
+    padding-top: 210px;
     background-color: $grey-background;
-    margin-bottom: 100px;
+    margin-bottom: 190px;
 
     @include tablet-down {
-        padding-top: 60px;  
+        padding-top: 60px; 
+        background-color: $white-color; 
+        margin-bottom: 60px;
     }
 }
 
@@ -18,7 +20,7 @@
 
     @include tablet-down {
         display: block;
-        max-width: 288px;
+        padding: 0 12px;
     }
 }
 
@@ -26,29 +28,73 @@
     margin: 0;
     padding: 0;
     padding-bottom: 50px;
-    font: 30px/35px $main-font;
+    font: 600 30px/35px $main-font;
     text-align: center;
 
     @include tablet-down {
-        font: normal 20px/23px $main-font;
+        font: 600 20px/23px $main-font;
         padding-bottom: 44px;
     }
 }
 
-.services__figure {
-    box-shadow: 0px 30px 80px rgba($black-color, 0.102355);
+.services__frame {
+    box-shadow: 0px 30px 80px rgba($black-color, .1);
+    position: relative;
+
+    @include tablet-down {
+        margin-bottom: 35px;
+    }
 }
 
-.services__figcaption {
+.services__frame:first-child::before, .services__frame:nth-child(6)::before {
+    position: absolute;
+    content: '';
+    background: url(../../img/icon-map.svg) no-repeat center;
+    background-color: $yellow-color;
+    top: 0;
+    left: 0;
+    width: 57px;
+    height: 54px;
+}
+
+.services__frame:nth-child(5)::before {
+    position: absolute;
+    content: '';
+    background: url(../../img/icon-map-text.svg) no-repeat center;
+    background-color: $yellow-color;
+    top: 0;
+    left: 0;
+    width: 316px;
+    height: 54px;
+}
+
+.services__description {
     background-color: $white-color;
     margin: 0;
-    padding: 0;
+    padding: 12px 30px;
     text-align: center;
     text-transform: uppercase;
     font-size: 18px/21px $main-font;
     letter-spacing: 3px;
+    height: 115px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @include tablet-down {
         font: 16px/21px $main-font;
+        height: 90px;
+    }
+}
+
+.services__picture {
+    display: block;
+    width: 100%;
+    height: 345px;
+    object-fit: cover;
+
+    @include tablet-down {
+        height: 268px;
+        width: 100%;
     }
 }

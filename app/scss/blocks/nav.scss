@@ -13,7 +13,17 @@
         left: 0;
         right: 0;
         bottom: 0;
-        transition: transform .2s ease;
+        transition: transform .2s ease,  opacity .2s ease;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 1;
+        overflow-y: auto;
+
+        &._active{
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+          }
     }
 }
 
@@ -30,11 +40,6 @@
         margin-top: 80px;
     }
 }
-
-.nav._active{
-    transform: translateY(0);
-    z-index: 1;
-  }
 
 .nav__link{
     color: $white-color;

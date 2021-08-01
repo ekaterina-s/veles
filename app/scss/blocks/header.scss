@@ -47,7 +47,7 @@
     }
 }
 
-.header__toggle--closed::before {
+.header__toggle::before {
     content: '';
     width: 24px;
     height: 2px;
@@ -55,7 +55,7 @@
     box-shadow: 0 8px 0 0 $white-color, 0 16px 0 0 $white-color;
 }
 
-.header__toggle--opened {
+.header__toggle._active {
     top: 0;
     right: auto;
     left: 0;
