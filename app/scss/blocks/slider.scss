@@ -18,8 +18,8 @@
     color: $white-color;
 
     @include tablet-down {
-        font: 700 18px/32px $main-font;
-        margin-bottom: 36px;
+        font: 700 18px/34px $main-font;
+        margin-bottom: 31px;
     }
 }
 
@@ -38,6 +38,7 @@
         bottom: 0;
         width: 100%;
         z-index: -2;
+        height: 100%;
     }
 }
 
@@ -46,7 +47,8 @@
     margin-bottom: 69px;
 
     @include tablet-down {
-        margin-bottom: 64px;
+        margin-bottom: 42px;
+        width: 168px;
     }
 }
 

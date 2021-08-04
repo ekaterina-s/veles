@@ -1,12 +1,17 @@
 .services {
     padding-top: 210px;
+    padding-bottom: 70px;
     background-color: $grey-background;
-    margin-bottom: 190px;
+    margin-bottom: 100px;
 
     @include tablet-down {
         padding-top: 60px; 
         background-color: $white-color; 
         margin-bottom: 60px;
+    }
+
+    @include mobile {
+        margin-bottom: -9px;
     }
 }
 
@@ -27,7 +32,7 @@
 .services__header {
     margin: 0;
     padding: 0;
-    padding-bottom: 50px;
+    padding-bottom: 72px;
     font: 600 30px/35px $main-font;
     text-align: center;
 
@@ -40,32 +45,56 @@
 .services__frame {
     box-shadow: 0px 30px 80px rgba($black-color, .1);
     position: relative;
+    transition: transform .2s ease;
 
     @include tablet-down {
         margin-bottom: 35px;
     }
 }
 
-.services__frame:first-child::before, .services__frame:nth-child(6)::before {
-    position: absolute;
-    content: '';
-    background: url(../../img/icon-map.svg) no-repeat center;
-    background-color: $yellow-color;
-    top: 0;
-    left: 0;
-    width: 57px;
-    height: 54px;
+.services__frame:hover  {
+    transform: translateY(-20px);
 }
 
-.services__frame:nth-child(5)::before {
+.services__frame:hover .services__description {
+    font-weight: 800;
+}
+
+
+.services__icon {
     position: absolute;
-    content: '';
-    background: url(../../img/icon-map-text.svg) no-repeat center;
-    background-color: $yellow-color;
     top: 0;
     left: 0;
-    width: 316px;
+    display: flex;
+}
+
+.services__icon-img {
+    width: 57px;
     height: 54px;
+    background-color: $yellow-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.services__icon-text {
+    font: 18px/21px $main-font;
+    color: $black-color;
+    background-color: $yellow-color;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity .2s ease, transform .2s ease;
+    pointer-events: none;
+}
+
+.services__icon-img:hover ~ .services__icon-text {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
 }
 
 .services__description {
@@ -74,7 +103,7 @@
     padding: 12px 30px;
     text-align: center;
     text-transform: uppercase;
-    font-size: 18px/21px $main-font;
+    font: 600 18px/21px $main-font;
     letter-spacing: 3px;
     height: 115px;
     display: flex;

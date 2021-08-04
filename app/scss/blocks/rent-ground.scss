@@ -2,14 +2,15 @@
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    margin-bottom: 100px;
+    margin-bottom: 192px;
     padding-left: 19px;
+    position: relative;
 
     @include tablet-down {
         display: grid;
         grid-template-columns: 1fr;
-        margin-bottom: 60px;
-        padding: 0 8px;
+        margin-bottom: 107px;
+        padding: 0;
     }
 }
 
@@ -45,6 +46,7 @@
 
     @include tablet-down {
         text-align: center;
+        padding-bottom: 64px;
     }
 }
 
@@ -69,11 +71,16 @@
 
 .rent-ground__picture {
     display: block;
-    width: 100%;
+    position: absolute;
+    top: -91px;
+    right: -16px;
+    width: 50%;
     height: 488px;
     box-shadow: -60px -66px 0 0 #F1F2F5;
 
     @include tablet-down {
+        width: 100%;
+        position: static;
         order: 1;
         height: 250px;
         box-shadow: none;

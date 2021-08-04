@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 
     <svg style="display: none;">
@@ -24,7 +24,7 @@
 </head>
 
 <body class="page-body">
-    <img class="test" src="../../главная.jpg" alt="">
+    <img class="test" src="../img/главная.jpg" alt="">
     <header class="header">
         <div class="container">
             <div class="header__top nav-box">
@@ -99,6 +99,12 @@
         <h2 class="services__header">Чем мы можем быть полезны?</h2>
         <div class="services__wrapper">
             <div class="services__frame">
+                <div class="services__icon">
+                    <div class="services__icon-img">
+                        <img class="services__icon-pic" src="../img/icon-map.svg" alt="иконка карты">
+                    </div>
+                    <p class="services__icon-text">Смотреть карту территорий</p>
+                </div>
                 <picture>
                     <source media="(max-width: 1074px)" srcset="../img/services-1-tablet.jpg">
                     <img class="services__picture" src="../img/services-1.jpg" alt="крановая площадка">
@@ -244,11 +250,11 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__top nav-box">
-                <a class="logo" href="#">
+                <a class="logo logo--footer" href="#">
                     <img class="logo__pic" src="../img/logo.svg" alt="logo">
                 </a>
-                <nav class="nav">
-                    <ul class="nav__list">
+                <nav class="nav nav--footer">
+                    <ul class="nav__list nav__list--footer">
                         <li class="nav__item">
                             <a href="#" class="nav__link nav__link--active">земля</a>
                         </li>

@@ -6,6 +6,12 @@
     height: 37px;
     position: relative;
     z-index: 4;
+
+    &--footer { 
+        @include tablet-down {
+            margin-bottom: 40px;
+        }
+    }
 }
 
 .logo::after {

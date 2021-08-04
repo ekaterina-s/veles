@@ -1,5 +1,5 @@
 .contact-form {
-    padding: 0 335px 105px 307px;
+    padding: 0 228px 105px 346px;
 
     @include tablet-down {
         padding: 0 12px 60px 12px;
@@ -15,8 +15,8 @@
 .contact-form__header {
     margin: 0;
     padding: 0;
-    padding-bottom: 31px;
-    font: 700 25px/29px $main-font;
+    padding-bottom: 29px;
+    font: 700 25px/34px $main-font;
     color: $black-color;
     letter-spacing: 0.13em;
     text-transform: uppercase;
@@ -24,7 +24,7 @@
 
     @include tablet-down {
         font: 700 18px/21px $main-font;
-        padding-bottom: 20px;
+        padding-bottom: 30px;
     }
 }
 

@@ -8,6 +8,8 @@
     padding: 48px 0;
 
     @include tablet-down {
-        padding: 40px 25px 47px 25px;
+        padding: 41px 0;
+            flex-direction: column;
+
     }
 }
