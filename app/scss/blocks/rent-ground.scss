@@ -14,12 +14,6 @@
     }
 }
 
-.container__small {
-    @include tablet-down {
-        order: 2;
-    }
-}
-
 .rent-ground__header {
     margin: 0;
     padding: 0;
@@ -42,11 +36,13 @@
     padding-bottom: 48px;
     font: 15px/18px $main-font;
     color: $black-color;
-    max-width: 430px;
+    width: 430px;
 
     @include tablet-down {
         text-align: center;
         padding-bottom: 64px;
+        margin: 0 auto;
+        width: auto;
     }
 }
 

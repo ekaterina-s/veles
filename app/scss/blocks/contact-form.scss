@@ -24,11 +24,17 @@
 
     @include tablet-down {
         font: 700 18px/21px $main-font;
+        padding: 0 120px 30px 120px;
+    }
+
+    @include mobile {
+        padding: 0;
         padding-bottom: 30px;
+        margin: auto;
     }
 }
 
-.form__textfield {
+.contact-form__textfield {
     width: 249px;
     height: 55px;
     background-color: $second-grey-background;
@@ -47,7 +53,7 @@
     }
 }
 
-.form__submit {
+.contact-form__submit {
     width: 170px;
     height: 50px;
     background-color: $black-color;

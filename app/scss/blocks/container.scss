@@ -4,3 +4,9 @@
     padding-right: 15px;
     margin: 0 auto;
 }
+
+.container__small {
+    @include tablet-down {
+        order: 2;
+    }
+}
