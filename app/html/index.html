@@ -7,7 +7,8 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 
     <svg style="display: none;">
@@ -15,16 +16,9 @@
             <path d="M25 5H1M1 5L3.5 1M1 5L4 8.5" fill="none" stroke="currentColor" />
         </symbol>
     </svg>
-
-
-    <!-- <svg width="25" height="9" viewBox="0 0 25 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M25 5H1M1 5L3.5 1M1 5L4 8.5" stroke="white"/>
-        </svg> -->
-
 </head>
 
 <body class="page-body">
-    <img class="test" src="../img/главная.jpg" alt="">
     <header class="header">
         <div class="container">
             <div class="header__top nav-box">
@@ -55,9 +49,9 @@
                         +7 (927) 678-45-14
                     </a>
 
-                    <span class="contacts__item contacts__item--address">
+                    <a class="contacts__item contacts__item--address" href="#">
                         г. Казань, Складская 20
-                    </span>
+                    </a>
                 </div>
                 <button class="header__toggle header__toggle--closed" aria-label="переключатель меню"
                     type="button"><span class="visually-hidden">открыть
@@ -109,63 +103,75 @@
                     <source media="(max-width: 1074px)" srcset="../img/services-1-tablet.jpg">
                     <img class="services__picture" src="../img/services-1.jpg" alt="крановая площадка">
                 </picture>
-                <div class="services__description">крановая площадка</div>
+                <a class="services__description" href="#">крановая площадка</a>
             </div>
             <div class="services__frame">
                 <picture>
                     <source media="(max-width: 1074px)" srcset="../img/services-2-tablet.jpg">
                     <img class="services__picture" src="../img/services-2.jpg" alt="товары сельского хозяйства">
                 </picture>
-                <div class="services__description">товары сельского хозяйства</div>
+                <a class="services__description" href="#">товары сельского хозяйства</a>
             </div>
             <div class="services__frame">
                 <picture>
                     <source media="(max-width: 1074px)" srcset="../img/services-3-tablet.jpg">
                     <img class="services__picture" src="../img/services-3.jpg" alt="фасовка">
                 </picture>
-                <div class="services__description">фасовка от 300 гр до 1 тонны</div>
+                <a class="services__description" href="#">фасовка от 300 гр до 1 тонны</a>
             </div>
             <div class="services__frame">
                 <picture>
                     <source media="(max-width: 1074px)" srcset="../img/services-4-tablet.jpg">
                     <img class="services__picture" src="../img/services-4.jpg" alt="гранитный щебень">
                 </picture>
-                <div class="services__description">гранитный щебень</div>
+                <a class="services__description" href="#">гранитный щебень</a>
             </div>
             <div class="services__frame">
+                <div class="services__icon">
+                    <div class="services__icon-img">
+                        <img class="services__icon-pic" src="../img/icon-map.svg" alt="иконка карты">
+                    </div>
+                    <p class="services__icon-text">Смотреть карту территорий</p>
+                </div>
                 <picture>
                     <source media="(max-width: 1074px)" srcset="../img/services-5-tablet.jpg">
                     <img class="services__picture" src="../img/services-5.jpg" alt="земля">
                 </picture>
-                <div class="services__description">аренда земли</div>
+                <a class="services__description" href="#">аренда земли</a>
             </div>
             <div class="services__frame">
+                <div class="services__icon">
+                    <div class="services__icon-img">
+                        <img class="services__icon-pic" src="../img/icon-map.svg" alt="иконка карты">
+                    </div>
+                    <p class="services__icon-text">Смотреть карту территорий</p>
+                </div>
                 <picture>
                     <source media="(max-width: 1074px)" srcset="../img/services-6-tablet.jpg">
                     <img class="services__picture" src="../img/services-6.jpg" alt="склад">
                 </picture>
-                <div class="services__description">аренда складов</div>
+                <a class="services__description" href="#">аренда складов</a>
             </div>
             <div class="services__frame">
                 <picture>
                     <source media="(max-width: 1074px)" srcset="../img/services-7-tablet.jpg">
                     <img class="services__picture" src="../img/services-7.jpg" alt="выгрузка вагонов">
                 </picture>
-                <div class="services__description">выгрузка вагонов и ответственное хранение</div>
+                <a class="services__description" href="#">выгрузка вагонов и ответственное хранение</a>
             </div>
             <div class="services__frame">
                 <picture>
                     <source media="(max-width: 1074px)" srcset="../img/services-8-tablet.jpg">
                     <img class="services__picture" src="../img/services-8.jpg" alt="автомобильные весы">
                 </picture>
-                <div class="services__description">автомобильные весы 18м, 80тн</div>
+                <a class="services__description" href="#">автомобильные весы 18м, 80тн</a>
             </div>
             <div class="services__frame">
                 <picture>
                     <source media="(max-width: 1074px)" srcset="../img/services-9-tablet.jpg">
                     <img class="services__picture" src="../img/services-9.jpg" alt="железодорожные весы">
                 </picture>
-                <div class="services__description">железодорожные весы на 2 вагона</div>
+                <a class="services__description" href="#">железодорожные весы на 2 вагона</a>
             </div>
         </div>
     </section>
@@ -240,9 +246,11 @@
             или персональное предложение</h2>
         <form action="get" class="contact-form__form">
             <legend class="visually-hidden">данные пользователя</legend>
-            <label class="contact-form__label"><input class="contact-form__textfield" type="text" name="name" placeholder="Имя">
+            <label class="contact-form__label"><input class="contact-form__textfield" type="text" name="name"
+                    placeholder="Имя">
             </label>
-            <label class="contact-form__label"><input class="contact-form__textfield" type="text" name="name" placeholder="Телефон">
+            <label class="contact-form__label"><input class="contact-form__textfield" type="text" name="name"
+                    placeholder="Телефон">
             </label>
             <button class="contact-form__submit" type="submit">отправить</button>
         </form>
@@ -277,9 +285,9 @@
                         +7 (927) 678-45-14
                     </a>
 
-                    <span class="contacts__item contacts__item--address">
+                    <a class="contacts__item contacts__item--address" href="#">
                         г. Казань, Складская 20
-                    </span>
+                    </a>
                 </div>
             </div>
         </div>

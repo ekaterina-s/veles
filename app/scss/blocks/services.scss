@@ -102,6 +102,8 @@
 }
 
 .services__description {
+    text-decoration: none;
+    color: $black-color;
     background-color: $white-color;
     margin: 0;
     padding: 12px 30px;
