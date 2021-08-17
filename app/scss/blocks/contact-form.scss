@@ -1,0 +1,72 @@
+.contact-form {
+    padding: 0 228px 105px 346px;
+
+    @include tablet-down {
+        padding: 0 12px 60px 12px;
+    }
+}
+
+.contact-form__form {
+    @include tablet-down {
+        text-align: center;
+    }
+}
+
+.contact-form__header {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 29px;
+    font: 700 25px/34px $main-font;
+    color: $black-color;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include tablet-down {
+        font: 700 18px/21px $main-font;
+        padding: 0 120px 30px 120px;
+    }
+
+    @include mobile {
+        padding: 0;
+        padding-bottom: 30px;
+        margin: auto;
+    }
+}
+
+.contact-form__textfield {
+    width: 249px;
+    height: 55px;
+    background-color: $second-grey-background;
+    border: none;
+    box-sizing: border-box;
+    padding: 18px 0 18px 20px;
+    margin-right: 15px;
+    font: 16px/19px $main-font;
+    color: rgba($black-color, 0.5);
+
+    @include tablet-down {
+        width: 288px;
+        height: 50px;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.contact-form__submit {
+    width: 170px;
+    height: 50px;
+    background-color: $black-color;
+    font: 12px/14px $main-font;
+    letter-spacing: 0.07em;
+    color: $white-color;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    border: none;
+    cursor: pointer;
+
+    @include tablet-down {
+        width: 288px;
+        height: 50px;
+    }
+}

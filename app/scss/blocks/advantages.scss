@@ -1,0 +1,105 @@
+.advantages {
+    padding: 0 110px 143px 110px;
+
+    @include tablet-down {
+        padding: 0 12px 60px 12px;
+    }
+
+    @include mobile {
+        padding-bottom: 27px;
+    }
+}
+
+.advantages__header {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 84px;
+    font: 600 30px/35px $main-font;
+    text-align: center;
+
+    @include tablet-down {
+        padding-bottom: 30px;
+        font: 600 20px/23px $main-font;
+    }
+}
+
+.advantages__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+    grid-gap: 98px;
+    grid-template-columns: repeat(3, 1fr);
+    font: 16px/19px $main-font;
+    counter-reset: list-counter-1 list-counter-2;
+
+    @include tablet-down {
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 54px;
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        grid-gap: 35px;
+        grid-gap: 0;
+    }
+}
+
+.advantages__item {
+    position: relative;
+    padding-left: 91px;
+
+    @include tablet-down {
+        margin-bottom: 48px;
+    }
+
+    @include mobile {
+        margin-bottom: 29px;
+        margin-bottom: 67px;
+    }
+}
+
+.advantages__item::before {
+    counter-increment: list-counter-1;
+    content: '0' counter(list-counter-1);
+    font: 600 20px/21px $main-font;
+    letter-spacing: 3px;
+    color: $second-black;
+    background-color: $yellow-color;
+    width: 51px;
+    height: 51px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.advantages__item::after {
+    counter-increment: list-counter-2;
+    content: counter(list-counter-2);
+    font: 80px/94px $main-font;
+    color: rgba($second-black, 0.03);
+    position: absolute;
+    top: -66px;
+    left: 133px;
+    z-index: -1;
+
+    @include tablet-down {
+        display: none;
+    }
+}
+
+
+.advantages__item--3, .advantages__item--5, .advantages__item--8 {
+    @include mobile {
+        margin-bottom: 29px;
+    }
+}
+
+.advantages__item--6, .advantages__item--7 {
+    @include mobile {
+        margin-bottom: 48px;
+    }
+}

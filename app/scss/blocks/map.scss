@@ -1,0 +1,26 @@
+.map {
+    margin-bottom: 243px;
+
+    @include tablet-down {
+        margin-bottom: 66px;
+    } 
+}
+
+.map__header {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 46px;
+    font: 600 30px/35px $main-font;
+    text-align: center;
+    color: $second-black;
+
+    @include tablet-down {
+        font: 600 20px/23px $main-font;
+        padding-bottom: 25px;
+    } 
+}
+
+.map__picture {
+    display: block;
+    width: 100%;
+}

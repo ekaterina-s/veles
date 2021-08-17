@@ -1,0 +1,85 @@
+.rent-ground {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 192px;
+    padding-left: 19px;
+    position: relative;
+
+    @include tablet-down {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 107px;
+        padding: 0;
+    }
+}
+
+.rent-ground__header {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 25px;
+    font: 700 30px/35px $main-font;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    color: $second-black;
+
+    @include tablet-down {
+        font: 700 18px/21px $main-font;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+}
+
+.rent-ground__text {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 48px;
+    font: 15px/18px $main-font;
+    color: $black-color;
+    width: 430px;
+
+    @include tablet-down {
+        text-align: center;
+        padding-bottom: 64px;
+        margin: 0 auto;
+        width: auto;
+    }
+}
+
+.rent-ground__link {
+    text-decoration: none;
+    display: block;
+    font: 700 12px/14px $main-font;
+    color: $white-color;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: $black-color;
+    padding: 19px 30px;
+    max-width: 277px;
+
+    @include tablet-down {
+        padding: 19px 35px;
+        text-align: center;
+        min-width: 288px;
+        margin: 0 auto;
+    }
+}
+
+.rent-ground__picture {
+    display: block;
+    position: absolute;
+    top: -91px;
+    right: -16px;
+    width: 50%;
+    height: 488px;
+    box-shadow: -60px -66px 0 0 #F1F2F5;
+
+    @include tablet-down {
+        width: 100%;
+        position: static;
+        order: 1;
+        height: 250px;
+        box-shadow: none;
+        margin-bottom: 18px;
+    }
+}
